@@ -35,5 +35,4 @@ const elementInView=(el,offset=100)=>{const top=el.getBoundingClientRect().top;r
 const displayScrollElement=el=>{el.classList.add("visible");};
 const handleScrollAnimation=()=>{scrollElements.forEach(el=>{if(elementInView(el,100))displayScrollElement(el);});};
 window.addEventListener("scroll",handleScrollAnimation);
-// Add 'scroll-animate' class to all cards and headings
 document.querySelectorAll(".service-card, .feature-card, .testimonial-card, .course-card, .faq-item, section h2, section p").forEach(el=>el.classList.add("scroll-animate"));
