@@ -19,7 +19,7 @@ nav ul li a:hover { color: #00f2fe; }
 @keyframes gradient { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
 .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
 .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
-.btn { background: #00f2fe; color: #000; padding: 0.8rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+.btn { background: #00f2fe; color: #000; padding: 0.8rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; }
 .btn:hover { background: #4facfe; transform: scale(1.05); }
 
 /* Sections */
@@ -29,9 +29,13 @@ nav ul li a:hover { color: #00f2fe; }
 
 /* Cards */
 .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
-.card { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 2rem; width: 250px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+.card { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 2rem; width: 250px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; opacity: 0; transform: translateY(50px); }
 .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
 .card i { font-size: 2rem; margin-bottom: 1rem; color: #00f2fe; }
+
+/* Scroll Animation */
+.animate { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
+.animate.show { opacity: 1; transform: translateY(0); }
 
 /* Contact Buttons */
 .contact-buttons { display: flex; justify-content: center; gap: 1.5rem; }
@@ -39,9 +43,9 @@ nav ul li a:hover { color: #00f2fe; }
 .whatsapp-btn { background: #25D366; color: #fff; }
 
 /* Floating Buttons */
-.float-btn { position: fixed; bottom: 20px; width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #fff; font-size: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 999; transition: 0.3s; }
+.float-btn { position: fixed; bottom: 20px; padding: 10px 15px; border-radius: 30px; display: flex; align-items: center; gap: 8px; color: #fff; font-weight: 600; font-size: 1rem; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 999; transition: 0.3s; text-decoration: none; }
 .float-btn:hover { transform: scale(1.1); }
-.call-float { right: 90px; background: #ff7eb3; }
+.call-float { left: 20px; background: #ff7eb3; }
 .whatsapp-float { right: 20px; background: #25D366; }
 
 /* Footer */
