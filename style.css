@@ -1,28 +1,24 @@
 /* Reset */
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Segoe UI', sans-serif; background:#0f0f0f; color:#fff; scroll-behavior: smooth; }
+body { font-family: 'Segoe UI', sans-serif; background:#0f0f0f; color:#00ff00; scroll-behavior: smooth; text-shadow:0 0 5px #00ff00,0 0 10px #00ff00; }
 
-/* Hero Section */
-.hero { position: relative; height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; overflow:hidden; }
+/* Particle background */
 #tsparticles { position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; background:#0f0f0f; }
-.hero-content { position: relative; z-index:2; padding:20px; }
-.hero h1, .hero p { text-shadow:0 0 5px #00ff00,0 0 10px #00ff00,0 0 20px #00ff00,0 0 40px #00ff00; animation:textGlow 2.5s ease-in-out infinite alternate; }
-.hero h1 { font-size:3rem; margin-bottom:1rem; }
-.hero p { font-size:1.25rem; margin-bottom:2rem; }
-@keyframes textGlow { 0%{text-shadow:0 0 5px #00ff00,0 0 10px #00ff00,0 0 20px #00ff00,0 0 40px #00ff00;}50%{text-shadow:0 0 10px #00ff00,0 0 20px #00ff00,0 0 30px #00ff00,0 0 60px #00ff00;}100%{text-shadow:0 0 5px #00ff00,0 0 10px #00ff00,0 0 20px #00ff00,0 0 40px #00ff00;} }
 
-/* CTA Button */
-.cta-btn { padding:0.75rem 2rem; border-radius:30px; background:linear-gradient(45deg,#00ff00,#00cc00,#009900); color:#fff; text-decoration:none; font-weight:bold; transition: transform 0.3s; }
-.cta-btn:hover{ transform:scale(1.1); }
+/* Hero content */
+.hero { position:relative; height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; overflow:hidden; }
+.hero-content { position: relative; z-index:2; padding:20px; color:#00ff00; text-align:center; }
+.hero h1{ font-size:3rem; margin-bottom:1rem; text-shadow:0 0 10px #00ff00,0 0 20px #00ff00; }
+.hero p{ font-size:1.25rem; margin-bottom:2rem; }
 
-/* Add previous sections CSS here (services, features, testimonials, courses, FAQ, newsletter, footer) */
+/* Sections */
+section{ position: relative; z-index:1; padding:60px 20px; max-width:1200px; margin: 20px auto; background: rgba(0,0,0,0.6); border-radius: 15px; }
+section h2{ font-size:2rem; margin-bottom:20px; color:#00ff00; text-align:center; }
 
-/* Floating Buttons - Green Neon */
-.float-btn{ position:fixed; bottom:20px; padding:12px 20px; border-radius:50px; display:flex; align-items:center; gap:10px; color:#fff; font-weight:600; font-size:1rem; box-shadow:0 0 15px rgba(0,255,0,0.5),0 0 30px rgba(0,255,0,0.3); z-index:999; text-decoration:none; transition:all 0.3s ease; background:linear-gradient(45deg,#00ff00,#00cc00,#009900); background-size:200% 200%; animation: gradientBtn 5s ease infinite;}
+/* Floating buttons */
+.float-btn{ position:fixed; bottom:20px; padding:12px 20px; border-radius:50px; display:flex; align-items:center; gap:10px; color:#fff; font-weight:600; font-size:1rem; box-shadow:0 0 15px rgba(0,255,0,0.5),0 0 30px rgba(0,255,0,0.3); z-index:999; text-decoration:none; transition: all 0.3s ease; background:linear-gradient(45deg,#00ff00,#00cc00,#009900); background-size:200% 200%; animation: gradientBtn 5s ease infinite;}
 .call-float{ left:20px;} .whatsapp-float{ right:20px;}
 .float-btn:hover{ transform:scale(1.1); box-shadow:0 0 25px rgba(0,255,0,0.8),0 0 50px rgba(0,255,0,0.5);}
-@keyframes gradientBtn{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes gradientBtn{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%;}}
 
-/* Back to Top */
-.back-to-top{ position:fixed; bottom:90px; right:20px; background:#00ff00; color:#fff; font-size:1.4rem; width:50px; height:50px; display:flex; align-items:center; justify-content:center; border-radius:50%; box-shadow:0 5px 15px rgba(0,0,0,0.3); cursor:pointer; opacity:0; pointer-events:none; transition:opacity 0.3s, transform 0.3s; z-index:998;}
-.back-to-top:hover{ transform:scale(1.1); background:#00cc00; }
+/* Add remaining previous CSS for services, features, testimonials, courses, FAQ, newsletter, footer, back-to-top */
