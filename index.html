@@ -12,6 +12,7 @@
 
   <!-- Hero Section -->
   <header class="hero">
+    <canvas id="particle-canvas"></canvas>
     <div class="hero-content">
       <h1>FuturePath IT</h1>
       <p>Guidance, Support & Growth for Students and Professionals</p>
@@ -51,18 +52,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Have questions or need guidance? Reach out to us anytime.</p>
-    <form action="https://formspree.io/f/xjvnvbzg" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit" class="cta-btn">Send Message</button>
-    </form>
-  </section>
-
   <!-- Floating Buttons -->
   <a href="tel:9146021996" class="float-btn call-float" data-tooltip="Call Us">
     <i class="fas fa-phone"></i> <span>Call</span>
@@ -76,28 +65,6 @@
     <i class="fas fa-arrow-up"></i>
   </a>
 
-  <script>
-    // ScrollReveal animations
-    ScrollReveal().reveal('.hero-content', { delay: 300, origin: 'bottom', distance: '50px' });
-    ScrollReveal().reveal('.about', { delay: 300, origin: 'left', distance: '50px' });
-    ScrollReveal().reveal('.service-card', { interval: 200, origin: 'bottom', distance: '50px' });
-    ScrollReveal().reveal('.contact', { delay: 300, origin: 'right', distance: '50px' });
-
-    // Back to Top button functionality
-    const backToTop = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
-        backToTop.style.opacity = "1";
-        backToTop.style.pointerEvents = "auto";
-      } else {
-        backToTop.style.opacity = "0";
-        backToTop.style.pointerEvents = "none";
-      }
-    });
-    backToTop.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
