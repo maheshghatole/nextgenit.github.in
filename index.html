@@ -3,94 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FuturePath IT - Helping Students Grow</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>FuturePath IT</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">FuturePath IT</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="burger"><div></div><div></div><div></div></div>
-  </nav>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
+  <!-- Hero Section -->
+  <header class="hero">
     <div class="hero-content">
-      <h1 class="animate">Guidance, Support & Training for Your Future</h1>
-      <p class="animate">Helping Polytechnic, BCA, MCA, BCS, MCS & Engineering students learn in-demand IT skills.  
-      On-demand & batch sessions for freshers and experienced professionals.</p>
-      <a href="#services" class="btn animate">Explore Services</a>
+      <h1>FuturePath IT</h1>
+      <p>Guidance, Support & Growth for Students and Professionals</p>
+      <a href="#services" class="cta-btn">Explore Services</a>
     </div>
-  </section>
+  </header>
 
-  <!-- About -->
-  <section id="about" class="section about animate">
-    <h2>About Us</h2>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>Who We Are</h2>
     <p>
-      Many students and professionals feel stuck in their careers and unsure how to move forward.  
-      We are not just a class or institute — we are <strong>experienced experts</strong> offering a  
-      helping hand to those who want to make a difference.  
-      <br><br>
-      With guidance, consultation, and skill development, we empower learners to achieve career growth  
-      and build confidence to succeed in the IT world.
+      Many students, freshers, and even experienced professionals feel stuck in their career journey. 
+      <strong>FuturePath IT</strong> is not just another institute – we are experienced experts, a helping hand to guide you. 
+      We focus on <em>growth, learning, and achieving</em> your career goals.
     </p>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="section services">
-    <h2 class="animate">Our Services</h2>
-    <div class="cards">
-      <div class="card animate">
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
         <i class="fas fa-laptop-code"></i>
-        <h3>High-Demand IT Courses</h3>
-        <p>Learn trending technologies, programming, and IT tools to stay industry-ready.</p>
+        <h3>On-Demand Training</h3>
+        <p>Learn IT skills, high-demand courses, and advanced technologies with personalized sessions.</p>
       </div>
-      <div class="card animate">
-        <i class="fas fa-users"></i>
-        <h3>On-Demand & Batch Sessions</h3>
-        <p>Flexible sessions tailored for both freshers and experienced professionals.</p>
+      <div class="service-card">
+        <i class="fas fa-user-graduate"></i>
+        <h3>Student Guidance</h3>
+        <p>Support for Polytechnic, BCA, MCA, BCS, MCS, and Engineering students across all branches.</p>
       </div>
-      <div class="card animate">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <h3>Expert Guidance</h3>
-        <p>Mentorship from industry professionals with years of real-world experience.</p>
-      </div>
-      <div class="card animate">
-        <i class="fas fa-hands-helping"></i>
-        <h3>Career Support</h3>
-        <p>Personalized consultation to overcome challenges and grow in your career.</p>
+      <div class="service-card">
+        <i class="fas fa-briefcase"></i>
+        <h3>Career Consultation</h3>
+        <p>One-on-one career mentoring for freshers and professionals seeking the right path forward.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact animate">
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <p>We’re here to guide, support, and train you. Reach out anytime!</p>
-    <div class="contact-buttons">
-      <a href="tel:9146021996" class="btn call-btn"><i class="fas fa-phone"></i> Call Us</a>
-      <a href="https://wa.me/919146021996" target="_blank" class="btn whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    </div>
+    <p>Have questions or need guidance? Reach out to us anytime.</p>
+    <form action="https://formspree.io/f/xjvnvbzg" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <button type="submit" class="cta-btn">Send Message</button>
+    </form>
   </section>
 
   <!-- Floating Buttons -->
-  <a href="tel:9146021996" class="float-btn call-float"><i class="fas fa-phone"></i> Call</a>
-  <a href="https://wa.me/919146021996" target="_blank" class="float-btn whatsapp-float"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <a href="tel:9146021996" class="float-btn call-float" data-tooltip="Call Us">
+    <i class="fas fa-phone"></i> <span>Call</span>
+  </a>
+  <a href="https://wa.me/919146021996" target="_blank" class="float-btn whatsapp-float" data-tooltip="WhatsApp Us">
+    <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+  </a>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 FuturePath IT | Helping Students & Professionals Grow</p>
-  </footer>
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
-  <script src="script.js"></script>
+  <script>
+    // ScrollReveal animations
+    ScrollReveal().reveal('.hero-content', { delay: 300, origin: 'bottom', distance: '50px' });
+    ScrollReveal().reveal('.about', { delay: 300, origin: 'left', distance: '50px' });
+    ScrollReveal().reveal('.service-card', { interval: 200, origin: 'bottom', distance: '50px' });
+    ScrollReveal().reveal('.contact', { delay: 300, origin: 'right', distance: '50px' });
+
+    // Back to Top button functionality
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTop.style.opacity = "1";
+        backToTop.style.pointerEvents = "auto";
+      } else {
+        backToTop.style.opacity = "0";
+        backToTop.style.pointerEvents = "none";
+      }
+    });
+    backToTop.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
