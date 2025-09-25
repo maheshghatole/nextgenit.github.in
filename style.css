@@ -4,13 +4,7 @@ body{font-family:'Segoe UI',sans-serif;background:#0f0f0f;color:#fff;scroll-beha
 
 /* Hero Section */
 .hero{position:relative;height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;overflow:hidden;}
-.gradient-bg{
-  position:absolute;top:0;left:0;right:0;bottom:0;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  background-size:400% 400%;
-  animation: gradientMove 15s ease infinite;
-  z-index:0;
-}
+.gradient-bg{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);background-size:400% 400%;animation: gradientMove 15s ease infinite;z-index:0;}
 @keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 #particle-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;background:transparent;}
 .hero-content{position:relative;z-index:2;padding:20px;}
@@ -21,35 +15,19 @@ body{font-family:'Segoe UI',sans-serif;background:#0f0f0f;color:#fff;scroll-beha
 
 /* Fade Up Keyframes */
 @keyframes fadeUp{0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
-/* Pulse Animation */
 @keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 0 15px rgba(0,172,193,0.5);}50%{transform:scale(1.05);box-shadow:0 0 25px rgba(0,172,193,0.7);}}
 
 /* Sections & Overlay */
 section{position:relative;padding:60px 20px;text-align:center;overflow:hidden;}
-section::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background: linear-gradient(135deg, rgba(0,172,193,0.05), rgba(0,188,212,0.05), rgba(38,198,218,0.05));background-size:400% 400%;animation: sectionGradient 15s ease infinite;pointer-events:none; z-index:0;}
+section::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,172,193,0.05),rgba(0,188,212,0.05),rgba(38,198,218,0.05));background-size:400% 400%;animation: sectionGradient 15s ease infinite;pointer-events:none;z-index:0;}
 section>*{position:relative; z-index:1;}
 @keyframes sectionGradient{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
 
 /* Glassmorphism Cards */
-.service-card, .feature-card, .testimonial-card, .course-card, .faq-item{
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 15px;
-  padding:25px;
-  margin:15px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.service-card:hover, .feature-card:hover, .testimonial-card:hover, .course-card:hover, .faq-item:hover{
-  transform:translateY(-10px) scale(1.02);
-  box-shadow:0 15px 35px rgba(0,0,0,0.3);
-}
+.service-card, .feature-card, .testimonial-card, .course-card, .faq-item{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);border-radius:15px;padding:25px;margin:15px;transition:transform 0.4s ease,box-shadow 0.4s ease;}
+.service-card:hover, .feature-card:hover, .testimonial-card:hover, .course-card:hover, .faq-item:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 15px 35px rgba(0,0,0,0.3);}
 .service-card i,.feature-card i{font-size:2rem;margin-bottom:15px;color:#00acc1;}
-
-/* Highlight Text */
 .highlight{background:linear-gradient(90deg,#00acc1,#00bcd4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-
-/* Alternating Section Background */
 .services, .courses, .newsletter { background: rgba(0,0,0,0.05); }
 .features, .testimonials, .faq { background: rgba(0,0,0,0.12); }
 
